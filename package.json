@@ -1,0 +1,21 @@
+{
+  "name": "intermine-search-tool",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@devexpress/dx-react-core": "^1.1.1",
+    "@devexpress/dx-react-grid": "^1.1.1",
+    "@devexpress/dx-react-grid-material-ui": "^1.1.1",
+    "material-ui": "next",
+    "material-ui-icons": "next",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-scripts": "1.1.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
