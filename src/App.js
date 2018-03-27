@@ -9,7 +9,6 @@ import GridComponent from "./GridComponent";
 import ButtonAppBar from "./ButtonAppBar";
 import CollapsibleCard from "./CollapsibleCard";
 import TextField from 'material-ui/TextField';
-import FloatingActionButton from './FloatingActionButton'
 
 
 
@@ -33,7 +32,6 @@ class App extends Component {
         <br />
         <br />
         <GridComponent></GridComponent>
-        <FloatingActionButton></FloatingActionButton>
       </div>
     );
   }

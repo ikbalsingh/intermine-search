@@ -4,7 +4,7 @@ import { withStyles } from 'material-ui/styles';
 import Paper from 'material-ui/Paper';
 import Grid from 'material-ui/Grid';
 import TestComponent from './TestComponent';
-
+import SecondTestComponent from "./SecondTestComponent";
 import { Card, CardActions, CardHeader, CardMedia, CardTitle, CardText } from 'material-ui/Card';
 import CheckBox from 'material-ui/Checkbox';
 import SingleLineGridList from "./SingleLineGridList";
@@ -36,7 +36,7 @@ function GridComponent(props) {
                     <SingleLineGridList></SingleLineGridList>                    
                 </Grid>
                 <Grid item xs={6} sm={2}>
-                    <TestComponent />
+                    <SecondTestComponent />
                 </Grid>
             </Grid>
         </div>

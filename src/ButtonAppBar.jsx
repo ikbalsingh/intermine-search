@@ -9,6 +9,7 @@ import IconButton from 'material-ui/IconButton';
 import MenuIcon from 'material-ui-icons/Menu';
 import TemporaryDrawer from "./TemporaryDrawer"
 import MoreVertIcon from 'material-ui-icons/MoreVert';
+import Image from './intermine2.png'
 
 
 const styles = {
@@ -42,9 +43,7 @@ function ButtonAppBar(props) {
                     </Typography>
                     <Button color="inherit">Login</Button> */}
                     <TemporaryDrawer />
-                    <Typography variant="title" color="inherit" className={classes.flex}>
-                        Title
-                    </Typography>
+                    <img src = {Image} style= {{"width" : "40px" , "height" : "20px"}}/>
                     <IconButton>
                         <MoreVertIcon />
                     </IconButton>

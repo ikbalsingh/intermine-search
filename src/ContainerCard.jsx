@@ -43,7 +43,7 @@ const styles = theme => ({
     backgroundColor: red[500],
   },
   title : {
-    fontSize : 14
+    fontSize : 14,
   }
 });
 
@@ -64,7 +64,7 @@ class ContainerCard extends React.Component {
         <Card>
           <CardContent>
             <Typography className={classes.title}>
-              Word of the Day
+              RatMine
           </Typography>
           </CardContent>
           <CardContent style={{ "display": "inline-block", "margin": "auto" }}>
