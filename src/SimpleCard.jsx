@@ -7,7 +7,7 @@ import Typography from 'material-ui/Typography';
 
 const styles = {
   card: {
-    
+
   },
   bullet: {
     display: 'inline-block',
@@ -21,32 +21,36 @@ const styles = {
   pos: {
     marginBottom: 12,
   },
+  organism: {
+    fontWeight: "400"
+  }
 };
 
 function SimpleCard(props) {
   const { classes } = props;
   const bull = <span className={classes.bullet}>•</span>;
-
+  function handleClick() {
+    window.open('http://www.flymine.org/flymine/report.do?id=17006790')
+  }
   return (
     <div>
-      <Card className={classes.card} style={{"margin":"15px"}}  zdepth={1} >
+      <Card className={classes.card} style={{ "margin": "15px" }} zdepth={1} >
         <CardContent>
           <Typography className={classes.title} color="textSecondary">
-            Word of the Day
+            Gene
           </Typography>
-          <Typography variant="headline" component="h2">
-            be{bull}nev{bull}o{bull}lent
+          <Typography className={classes.organism}>
+            Organism : Mus musculus
           </Typography>
           <Typography className={classes.pos} color="textSecondary">
-            adjective
+            Symbol : Brca1
           </Typography>
           <Typography component="p">
-            well meaning and kindly.<br />
-            {'"a benevolent smile"'}
+            PrimaryIdentifier : MGI:104537
           </Typography>
         </CardContent>
         <CardActions>
-          <Button size="small">Learn More</Button>
+          <Button size="small" onClick={handleClick} >Learn More</Button>
         </CardActions>
       </Card>
     </div>

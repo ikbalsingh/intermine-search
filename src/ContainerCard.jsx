@@ -15,10 +15,11 @@ import ExpandMoreIcon from 'material-ui-icons/ExpandMore';
 import ChevronLeft from 'material-ui-icons/ChevronLeft';
 import MoreVertIcon from 'material-ui-icons/MoreVert';
 import ChevronRight from 'material-ui-icons/ChevronRight';
-
+import Image from './45x45.png'
 import SimpleCard from './SimpleCard'
 import Grid from 'material-ui/Grid';
 import $ from "jquery";
+import Icon from 'material-ui/Icon';
 
 
 const styles = theme => ({
@@ -45,8 +46,17 @@ const styles = theme => ({
   avatar: {
     backgroundColor: red[500],
   },
+  cardHeader: {
+    backgroundColor: '#fafafa'
+  },
   title: {
     fontSize: 14,
+    fontWeight : "500"
+  },
+  image : {
+    float : "right",
+    width : "20px",
+    height : "20px"
   }
 });
 
@@ -62,11 +72,14 @@ class ContainerCard extends React.Component {
 
     return (
       <div style={{
-        "width": "100%",
+        "margin": "20px 0px",
       }}>
         <Card>
-          <CardContent>
+          <CardContent className={classes.cardHeader}>
             <Typography className={classes.title}>
+              <Icon>
+                <img src={Image} className = {classes.image} />
+              </Icon>
               RatMine
           </Typography>
           </CardContent>

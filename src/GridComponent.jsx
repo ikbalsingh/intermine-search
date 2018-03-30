@@ -40,7 +40,7 @@ function GridComponent(props) {
                     <TestComponent />
                 </Grid>
                 <Grid item xs={6} sm={8}>
-                    <SearchBar />
+                    <SearchBar value={props.value} handleChange={props.handleChange} />
                     <br />
                     <br />
                     <SingleLineGridList></SingleLineGridList>
@@ -60,3 +60,9 @@ GridComponent.propTypes = {
 };
 
 export default withStyles(styles)(GridComponent);
+
+
+
+
+
+

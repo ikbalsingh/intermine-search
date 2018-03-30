@@ -24,28 +24,28 @@ class TestComponent extends React.Component {
                 name: "Publication"
             }, {
                 id: 2,
-                name: "Publication"
+                name: "Protein"
             }, {
                 id: 3,
-                name: "Publication"
+                name: "Gene"
             }, {
                 id: 4,
-                name: "Publication"
+                name: "ProteinDomain"
             }, {
                 id: 5,
-                name: "Publication"
+                name: "UniProtFeature"
             }, {
                 id: 6,
-                name: "Publication"
+                name: "InteractionExp"
             }, {
                 id: 7,
-                name: "Publication"
+                name: "Author"
             }, {
                 id: 8,
-                name: "Publication"
+                name: "MeshTerm"
             }, {
                 id: 9,
-                name: "Publication"
+                name: "GOTerm"
             }]
         }
     }
@@ -53,7 +53,7 @@ class TestComponent extends React.Component {
     render() {
         const { classes } = this.props;
         const cardActions = this.state.mine.map((mine) =>
-            <CardActions key={mine.id} style={{  "padding": "0 25px 0 0" }}>
+            <CardActions key={mine.id} style={{ "padding": "0 25px 0 0" }}>
                 <Checkbox id={mine.name} classes={{ checked: classes.checked }} />
                 <label htmlFor={mine.name}>{mine.name}</label>
             </CardActions>

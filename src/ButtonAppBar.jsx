@@ -11,16 +11,14 @@ import TemporaryDrawer from "./TemporaryDrawer"
 import MoreVertIcon from 'material-ui-icons/MoreVert';
 import Image from './intermine2.png'
 import Icon from 'material-ui/Icon';
-
-
-
+import TextField from 'material-ui/TextField'
 
 const styles = {
     root: {
         flexGrow: 1,
     },
     flex: {
-        flex: "auto"
+        flex: 1
     },
     menuButton: {
         marginLeft: -12,
@@ -35,25 +33,28 @@ const styles = {
     image: {
         width: "12%",
         height: "20px"
-    }
+    },
 };
 
-function ButtonAppBar(props) {
-    const { classes } = props;
-    return (
-        <div className={classes.root}>
-            <AppBar position="static" className={classes.navBar} >
-                <Toolbar>
-                    <Icon className={classes.flex} >
-                        <img src={Image} className={classes.image} />
-                    </Icon>
-                    <Button> Help </Button>
-                    <Button> Blog </Button>
-                </Toolbar>
+class ButtonAppBar extends React.Component {
+    render() {
+        const { classes } = this.props;
+        return (
+            <div className={classes.root}>
+                <AppBar position="static" className={classes.navBar} >
+                    <Toolbar>
+                        <Icon className={classes.flex} >
+                            <img src={Image} className={classes.image} />
+                        </Icon>
+                        <TextField id="textfield" placeholder="Search" className={classes.searchBar} value={this.props.value} onChange={this.props.handleChange}/>
+                        <Button> Help </Button>
+                        <Button> Blog </Button>
+                    </Toolbar>
 
-            </AppBar>
-        </div>
-    );
+                </AppBar>
+            </div>
+        );
+    }
 }
 
 ButtonAppBar.propTypes = {

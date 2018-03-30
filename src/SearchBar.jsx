@@ -29,7 +29,7 @@ class SearchBar extends Component {
                 }}
                     id="full-width"
                     placeholder="Search for genes, proteins, pathways, ontology terms, authors, etc."
-                />
+                    value={this.props.value} onChange={this.props.handleChange} />
                 <ListItemIcon>
                     <Search />
                 </ListItemIcon>

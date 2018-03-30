@@ -19,26 +19,58 @@ class TestComponent extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            mine: []
+            mine: [
+                "BMAP",
+                "BeanMine",
+                "BovineMine",
+                "CHOmine",
+                "ChickpeaMine",
+                "CowpeaMine",
+                "FlyMine",
+                "GrapeMine",
+                "HumanMine",
+                "HymenopteraMine",
+                "IndigoMine",
+                "LegumeMine",
+                "MaizeMine",
+                "MedicMine",
+                "MitoMiner",
+                "ModMine",
+                "MouseMine",
+                "PeanutMine",
+                "PhytoMine",
+                "PlanMine",
+                "RatMine",
+                "RepetDB",
+                "SoyMine",
+                "TargetMine",
+                "TetraMine",
+                "ThaleMine",
+                "Wheat3BMine",
+                "WormMine",
+                "XenMine",
+                "YeastMine",
+                "ZebrafishMine"
+            ]
         }
     }
     componentWillMount() {
-        let mines
-        axios.get('http://registry.intermine.org/service/instances').then((response) => {
-            mines = response.data.instances.filter((val, index) =>
-                (val.status === "Running" ? val : null)
-            )
-            this.setState({
-                "mine": mines
-            })
-        })
+        // let mines
+        // axios.get('http://registry.intermine.org/service/instances').then((response) => {
+        //     mines = response.data.instances.filter((val, index) =>
+        //         (val.status === "Running" ? val : null)
+        //     )
+        //     this.setState({
+        //         "mine": mines
+        //     })
+        // })
     }
     render() {
         const { classes } = this.props;
-        const cardActions = this.state.mine.map((mine) =>
-            <CardActions key={mine.id} style={{ "margin": "0px", "padding": "0px" }}>
-                <Checkbox id={mine.name} classes={{ checked: classes.checked }} />
-                <label htmlFor={mine.name}>{mine.name}</label>
+        const cardActions = this.state.mine.map((mine, index) =>
+            <CardActions key={index} style={{ "margin": "0px", "padding": "0px" }}>
+                <Checkbox id={mine} classes={{ checked: classes.checked }} />
+                <label htmlFor={mine}>{mine}</label>
             </CardActions>
         );
 

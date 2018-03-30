@@ -12,20 +12,45 @@ import CollapsibleCard from "./CollapsibleCard";
 import TextField from 'material-ui/TextField';
 import withStyles from 'material-ui/styles';
 import SearchBar from './SearchBar'
+import $ from 'jquery'
+
 
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      "val": ""
+    }
+    this.handleChange = this.handleChange.bind(this)
+  }
+  componentDidMount() {
+    $(window).bind('scroll', function () {
+      if ($(window).scrollTop() > 86) {
+        $('#textfield').show()
+      } else {
+        $('#textfield').hide()
+      }
+    });
+  }
+  handleChange(e) {
+    e.preventDefault();
+    this.setState({
+      "val": e.target.value
+    })
+  }
+
   render() {
     return (
       <div>
-        <ButtonAppBar title="My AppBar" />
+        <ButtonAppBar title="My AppBar" value={this.state.val} handleChange={this.handleChange}  />
         <br />
         <br />
         <br />
         {/* <SearchBar /> */}
         <br />
         <br />
-        <GridComponent></GridComponent>
+        <GridComponent value={this.state.val} handleChange={this.handleChange} />
       </div>
     );
   }

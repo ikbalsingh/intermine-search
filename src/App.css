@@ -32,6 +32,10 @@ body{
   to { transform: rotate(360deg); }
 }
 
-.MuiInput-underline-187:after {
+.MuiInput-underline-57:after {
   background-color : #bdd73c !important
+}
+
+#textfield {
+  display: none;
 }
