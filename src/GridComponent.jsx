@@ -8,6 +8,7 @@ import SecondTestComponent from "./SecondTestComponent";
 import { Card, CardActions, CardHeader, CardMedia, CardTitle, CardText } from 'material-ui/Card';
 import CheckBox from 'material-ui/Checkbox';
 import SingleLineGridList from "./SingleLineGridList";
+import SearchBar from './SearchBar'
 
 
 const styles = theme => ({
@@ -19,6 +20,14 @@ const styles = theme => ({
         textAlign: 'center',
         color: theme.palette.text.secondary,
     },
+    gridRight: {
+        position: "fixed",
+        right: 0,
+        top : "25%"
+    },
+    container: {
+        margin: "0px"
+    }
 });
 
 function GridComponent(props) {
@@ -26,16 +35,19 @@ function GridComponent(props) {
 
     return (
         <div className={classes.root}>
-            <Grid container spacing={24}>
+            <Grid container spacing={24} className={classes.container} >
                 <Grid item xs={6} sm={2}>
                     <TestComponent />
                 </Grid>
                 <Grid item xs={6} sm={8}>
+                    <SearchBar />
+                    <br />
+                    <br />
                     <SingleLineGridList></SingleLineGridList>
                     <SingleLineGridList></SingleLineGridList>
-                    <SingleLineGridList></SingleLineGridList>                    
+                    <SingleLineGridList></SingleLineGridList>
                 </Grid>
-                <Grid item xs={6} sm={2}>
+                <Grid item xs={6} sm={2} className={classes.gridRight}>
                     <SecondTestComponent />
                 </Grid>
             </Grid>

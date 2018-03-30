@@ -10,6 +10,9 @@ import MenuIcon from 'material-ui-icons/Menu';
 import TemporaryDrawer from "./TemporaryDrawer"
 import MoreVertIcon from 'material-ui-icons/MoreVert';
 import Image from './intermine2.png'
+import Icon from 'material-ui/Icon';
+
+
 
 
 const styles = {
@@ -17,15 +20,21 @@ const styles = {
         flexGrow: 1,
     },
     flex: {
-        flex: 1,
+        flex: "auto"
     },
     menuButton: {
         marginLeft: -12,
         marginRight: 20,
     },
     navBar: {
-        backgroundColor: "white",
-        color: "black"
+        backgroundColor: "#fafafa",
+        color: "black",
+        position: "fixed",
+        top: 0
+    },
+    image: {
+        width: "12%",
+        height: "20px"
     }
 };
 
@@ -35,19 +44,11 @@ function ButtonAppBar(props) {
         <div className={classes.root}>
             <AppBar position="static" className={classes.navBar} >
                 <Toolbar>
-                    {/* <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
-                        <MenuIcon />
-                    </IconButton>
-                    <Typography variant="title" color="inherit" className={classes.flex}>
-                        Title
-                    </Typography>
-                    <Button color="inherit">Login</Button> */}
-                    <TemporaryDrawer />
-                    <img src = {Image} style= {{"width" : "40px" , "height" : "20px"}}/>
-                    <IconButton>
-                        <MoreVertIcon />
-                    </IconButton>
-                    <Button color="inherit">Login</Button>
+                    <Icon className={classes.flex} >
+                        <img src={Image} className={classes.image} />
+                    </Icon>
+                    <Button> Help </Button>
+                    <Button> Blog </Button>
                 </Toolbar>
 
             </AppBar>

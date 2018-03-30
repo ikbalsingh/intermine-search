@@ -3,8 +3,17 @@ import Card from 'material-ui/Card';
 import Checkbox from 'material-ui/Checkbox';
 import { CardHeader, CardActions } from 'material-ui';
 import axios from 'axios'
+import { withStyles } from 'material-ui/styles';
+import green from 'material-ui/colors/green';
+import PropTypes from 'prop-types';
 
-const shadow = { value: 1 }
+
+const styles = {
+    checked: {
+        color: "#bdd73c"
+    }
+}
+
 
 class TestComponent extends React.Component {
     constructor(props) {
@@ -25,9 +34,10 @@ class TestComponent extends React.Component {
         })
     }
     render() {
+        const { classes } = this.props;
         const cardActions = this.state.mine.map((mine) =>
             <CardActions key={mine.id} style={{ "margin": "0px", "padding": "0px" }}>
-                <Checkbox id={mine.name} />
+                <Checkbox id={mine.name} classes={{ checked: classes.checked }} />
                 <label htmlFor={mine.name}>{mine.name}</label>
             </CardActions>
         );
@@ -41,5 +51,8 @@ class TestComponent extends React.Component {
     }
 }
 
+TestComponent.propTypes = {
+    classes: PropTypes.object.isRequired,
+};
 
-export default TestComponent;
+export default withStyles(styles)(TestComponent);

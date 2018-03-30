@@ -11,12 +11,14 @@ import Avatar from 'material-ui/Avatar';
 import IconButton from 'material-ui/IconButton';
 import red from 'material-ui/colors/red';
 import FavoriteIcon from 'material-ui-icons/Favorite';
-import ShareIcon from 'material-ui-icons/Share';
 import ExpandMoreIcon from 'material-ui-icons/ExpandMore';
+import ChevronLeft from 'material-ui-icons/ChevronLeft';
 import MoreVertIcon from 'material-ui-icons/MoreVert';
+import ChevronRight from 'material-ui-icons/ChevronRight';
 
 import SimpleCard from './SimpleCard'
 import Grid from 'material-ui/Grid';
+import $ from "jquery";
 
 
 const styles = theme => ({
@@ -28,6 +30,7 @@ const styles = theme => ({
   },
   actions: {
     display: 'flex',
+    marginTop: "-20px"
   },
   expand: {
     transform: 'rotate(0deg)',
@@ -42,8 +45,8 @@ const styles = theme => ({
   avatar: {
     backgroundColor: red[500],
   },
-  title : {
-    fontSize : 14,
+  title: {
+    fontSize: 14,
   }
 });
 
@@ -60,7 +63,7 @@ class ContainerCard extends React.Component {
     return (
       <div style={{
         "width": "100%",
-      }}> 
+      }}>
         <Card>
           <CardContent>
             <Typography className={classes.title}>
@@ -69,14 +72,24 @@ class ContainerCard extends React.Component {
           </CardContent>
           <CardContent style={{ "display": "inline-block", "margin": "auto" }}>
             <Grid container spacing={24}>
-              <Grid item xs={6} sm={4}>
+              <Grid item style={{ "margin": "auto" }} xs={6} sm={1} >
+                <IconButton>
+                  <ChevronLeft />
+                </IconButton>
+              </Grid>
+              <Grid item xs={6} lg={3}>
                 <SimpleCard style={{ "margin": "10px" }} />
               </Grid>
-              <Grid item xs={6} sm={4}>
+              <Grid item xs={6} lg={4}>
                 <SimpleCard style={{ "margin": "10px" }} />
               </Grid>
-              <Grid item xs={6} sm={4}>
+              <Grid item xs={6} lg={3}>
                 <SimpleCard style={{ "margin": "10px" }} />
+              </Grid>
+              <Grid item style={{ "margin": "auto" }} xs={6} sm={1}>
+                <IconButton>
+                  <ChevronRight />
+                </IconButton>
               </Grid>
             </Grid>
           </CardContent>

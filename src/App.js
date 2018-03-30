@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import logo from './logo.svg';
 import './App.css';
 import AppBar from 'material-ui/AppBar';
@@ -9,7 +10,8 @@ import GridComponent from "./GridComponent";
 import ButtonAppBar from "./ButtonAppBar";
 import CollapsibleCard from "./CollapsibleCard";
 import TextField from 'material-ui/TextField';
-
+import withStyles from 'material-ui/styles';
+import SearchBar from './SearchBar'
 
 
 class App extends Component {
@@ -19,16 +21,8 @@ class App extends Component {
         <ButtonAppBar title="My AppBar" />
         <br />
         <br />
-        <TextField style={{
-          "marginLeft": "25%",
-          "width": "50%"
-        }}
-          id="full-width"
-          InputLabelProps={{
-            shrink: true,
-          }}
-          placeholder="Search"
-        />
+        <br />
+        {/* <SearchBar /> */}
         <br />
         <br />
         <GridComponent></GridComponent>
@@ -36,5 +30,6 @@ class App extends Component {
     );
   }
 }
+
 
 export default App;

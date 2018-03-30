@@ -137,46 +137,7 @@ class SingleLineGridList extends React.Component {
         const { classes } = this.props;
         return (
             <div className={classes.root} >
-                {/* <Card className={classes.card} style={{ "margin": "20px" }} zdepth={1}> 
-
-                </Card> */}
-                <ContainerCard></ContainerCard>
-                {/* <GridList className={classes.gridList} cols={2.5}>
-                    {tileData.map(tile => (
-                        <GridListTile key={tile.img}>
-                            <SimpleCard style={{ "margin": "10px" }} />
-                        </GridListTile>
-                    ))}
-                    <IconButton
-                        className={classnames(classes.expand, {
-                            [classes.expandOpen]: this.state.expanded,
-                        })}
-                        onClick={this.handleExpandClick}
-                        aria-expanded={this.state.expanded}
-                        aria-label="Show more"
-                    >
-                        <ExpandMoreIcon />
-                    </IconButton>
-                </GridList> */}
-                <Collapse in={this.state.expanded} timeout="auto" unmountOnExit>
-                    <GridList className={classes.gridList} cols={2.5}>
-                        {tileData.map(tile => (
-                            <GridListTile key={tile.img}>
-                                <SimpleCard style={{ "margin": "10px" }} />
-                            </GridListTile>
-                        ))}
-                        <IconButton
-                            className={classnames(classes.expand, {
-                                [classes.expandOpen]: this.state.expanded,
-                            })}
-                            onClick={this.handleExpandClick}
-                            aria-expanded={this.state.expanded}
-                            aria-label="Show more"
-                        >
-                            <ExpandMoreIcon />
-                        </IconButton>
-                    </GridList>
-                </Collapse>
+                <ContainerCard />
             </div>
         );
     }
