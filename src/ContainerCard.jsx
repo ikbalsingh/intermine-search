@@ -72,24 +72,14 @@ class ContainerCard extends React.Component {
           </CardContent>
           <CardContent style={{ "display": "inline-block", "margin": "auto" }}>
             <Grid container spacing={24}>
-              <Grid item style={{ "margin": "auto" }} xs={6} sm={1} >
-                <IconButton>
-                  <ChevronLeft />
-                </IconButton>
-              </Grid>
-              <Grid item xs={6} lg={3}>
+              <Grid item xs={6} lg={4}>
                 <SimpleCard style={{ "margin": "10px" }} />
               </Grid>
               <Grid item xs={6} lg={4}>
                 <SimpleCard style={{ "margin": "10px" }} />
               </Grid>
-              <Grid item xs={6} lg={3}>
+              <Grid item xs={6} lg={4}>
                 <SimpleCard style={{ "margin": "10px" }} />
-              </Grid>
-              <Grid item style={{ "margin": "auto" }} xs={6} sm={1}>
-                <IconButton>
-                  <ChevronRight />
-                </IconButton>
               </Grid>
             </Grid>
           </CardContent>
